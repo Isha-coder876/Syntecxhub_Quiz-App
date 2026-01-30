@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Master</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="quiz-box">
+            <div id="startScreen">
+                <h1>Quiz Master</h1>
+                <p class="subtitle">Test Your Frontend Knowledge!</p>
+                <div class="buttons">
+                    <button onclick="startQuiz()">Start Quiz</button>
+                </div>
+            </div>
+
+            <div id="quizScreen" class="hidden">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressBar"></div>
+                </div>
+                
+                <div class="question-number">
+                    <span id="questionNumber">Question 1 of 10</span>
+                    <span class="score-badge" id="currentScore">Score: 0</span>
+                </div>
+
+                <div class="question-text" id="questionText"></div>
+
+                <div class="options" id="optionsContainer"></div>
+
+                <div class="buttons">
+                    <button id="nextBtn" onclick="nextQuestion()" class="hidden">Next Question</button>
+                </div>
+            </div>
+
+            <div id="resultScreen" class="hidden">
+                <div class="result-icon" id="resultIcon">🎉</div>
+                <div class="result-title">Quiz Complete!</div>
+                <div class="result-score" id="finalScore">0/10</div>
+                <div class="result-message" id="resultMessage"></div>
+                <div class="buttons">
+                    <button onclick="restartQuiz()" class="secondary">Play Again</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
